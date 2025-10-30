@@ -1,0 +1,64 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+header{
+    background-color: white;
+}
+#infoheader{
+    background-color: #A5D6A7;
+}
+.btnMenu{
+    color: rgb(0, 0, 0);
+    list-style: none;
+    background-color: #4CAF50;
+    padding: 5px;
+    transition-duration: .2s ;
+    border-radius: var(--bs-border-radius) !important;
+    box-shadow: var(--bs-box-shadow) !important;
+
+}
+.animar:hover {
+    background-color: #77e37b!important;
+
+}
+#login{
+    background-color:#4CAF50 ;
+    position: absolute;
+    left: 86vw;
+
+}
+#carrinho{
+    background-color:#4CAF50 ;
+    position: absolute;
+    left: 90vw;
+
+}
+footer{
+    background-color: #113913;
+    color: white;
+}
+.linksfooter{
+    color: white;
+    text-decoration: none;
+}
+#filtros{
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0 5px; 
+    background-color: white;
+    height: auto;
+    width: 250px;
+    position: absolute;
+    z-index: 2800;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+.btnVerFiltros{
+    user-select: none;
+}
+.btnVerFiltros:hover{
+    cursor: pointer;
+}
+#filtros.aberto {
+    max-height: 1000px;       /* valor grande suficiente para o conteúdo */
+    padding: 5px;              /* padding vertical */
+}

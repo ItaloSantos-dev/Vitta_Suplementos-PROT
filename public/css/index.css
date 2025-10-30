@@ -1,0 +1,36 @@
+.produtoCard {
+    transition: transform .2s ease, box-shadow .2s ease;
+    border-radius: 14px;
+}
+
+.produtoCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+
+}
+.nomeProduto{
+    height: 10vh;
+    font-size: small;
+    font-weight: bold;
+}
+.precoProduto{
+    font-size: small;
+}
+
+.precoParcelado{
+    font-size: small;
+}
+.precoVista{
+    font-size: medium;
+    font-weight: bold;
+    color: #418245ff;
+}
+.verMais{
+    text-decoration: none;
+}
+.btnaddCarrinho{
+    font-size: small;
+    flex-wrap: nowrap;
+    width: 100%;
+    
+}

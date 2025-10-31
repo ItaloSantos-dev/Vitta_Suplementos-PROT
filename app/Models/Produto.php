@@ -17,4 +17,8 @@ class Produto extends Model
         'especificacoes',
         'estoque',
     ];
+
+    public function marca(){
+        return $this->belongsTo(Marca::class);
+    }
 }

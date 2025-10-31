@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Pagina principal')
+@section('title', 'Vitta-Suplementos')
 
 @section('style')
 <link rel="stylesheet" href="{{asset('css/index.css')}}">
@@ -11,7 +11,7 @@
         <div class="row g-4">
             @foreach($produtos as $produto)
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex gap-2">
-                    <a class="verMais" href="">
+                    <a class="verMais" href="{{route('produtos.show', $produto->id)}}">
                         <div class="card produtoCard shadow-sm rounded-3 w-100 d-flex flex-column h-100">
                         <img src="{{$produto->imagem}}" alt="{{$produto->nome}}" 
                             class="card-img-top p-3"

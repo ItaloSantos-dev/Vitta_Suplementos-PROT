@@ -13,20 +13,22 @@
     @yield('style')
 </head>
 <body>
-    <header class=" border shadow m-0 sticky-top">
+    <header class=" border shadow m-0 sticky-top pb-1">
         <div id="infoheader" class="text-center">
             <p class="fw-bold">Tudo para sua nutrição e saúde</p>
         </div>
 
 
         <div class="logo text-center">
-            <a href="#"><img src="{{asset('imagens/layout/logo.png')}}" alt="logo" class="img-fluid" style="height: 100px;"></a>
+            <a href="/"><img src="{{asset('imagens/layout/logo.png')}}" alt="logo" class="img-fluid" style="height: 100px;"></a>
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col-3">
-                    <input class="form-control rounded" placeholder="Busca" type="search" name="" id="">
+                    <form action="">
+                        <input class="form-control rounded" placeholder="Busca" type="search" name="" id="">
+                    </form>
                 </div>
             </div>
         </div>
@@ -38,6 +40,7 @@
 
         <nav class="py-2 ">
             <ul class="d-flex justify-content-center gap-3 list-unstyled mb-0">
+                <li ><a href="/" class="btnMenu text-decoration-none animar">Home</a></li>
                 <li ><a href="#" class="btnMenu text-decoration-none animar">Marcas</a></li>
                 <li ><a href="#" class="btnMenu text-decoration-none animar">Wheys</a></li>
                 <li ><a href="#" class="btnMenu text-decoration-none animar">Hipercalóricos</a></li>
@@ -83,7 +86,7 @@
     @yield('conteudo')
 
 
-    <footer class=" mt-auto">
+    <footer class=" mt-auto p-2">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
@@ -93,7 +96,8 @@
                     <ul>
                         <li class="list-unstyled"><a class="linksfooter" href=""> <i class="bi bi-instagram"></i> Instagram</a></li>
                         <li class="list-unstyled"><a class="linksfooter" href=""> <i class="bi bi-envelope"></i> example@gmail.com</a></li>
-                        <li class="list-unstyled"><a class="linksfooter" href=""><i class="bi bi-whatsapp"></i>Whatsapp</a></li>
+                        <li class="list-unstyled"><a class="linksfooter" target="_blank" href="https://wa.me/559981587631?text=Gostaria%20de%20ver%20seu%20cat%C3%A1logo%20de%20suplementos
+                        "><i class="bi bi-whatsapp"></i>Whatsapp</a></li>
                     </ul>
                 </div>
             </div>

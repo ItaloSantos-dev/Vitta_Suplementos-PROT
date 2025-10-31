@@ -37,7 +37,7 @@ class ProdutoController extends Controller
      */
     public function show(string $id)
     {
-        $produto = Produto::with('marca')->find($id);
+        $produto = Produto::with('marca')->with('categoria')->find($id);
         return view('vermais', compact('produto'));
     }
 

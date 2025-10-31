@@ -17,14 +17,15 @@
         <!-- Informações -->
         <div class="col-12 col-md-5">
             <h2 class="fw-bold mb-2 text-center">{{ $produto->nome }}</h2>
-            <a href=""><span class="badge bg-success mb-3 px-3 py-2">{{ $produto->marca->nome }}</span></a>
+            <div>
+                <a href=""><span class="badge bg-success mb-3 px-3 py-2">{{ $produto->marca->nome }}</span></a>
+                <a href=""><span class="badge bg-success mb-3 px-3 py-2">{{$produto->categoria->nome}}</span></a>
+            </div>
 
             <div class="bg-light p-3 rounded mb-3 shadow-sm">
                 <p class="mb-1 text-muted">À vista</p>
                 <p class="h4 text-success fw-bold">R$ {{ number_format($produto->preco, 2, ',', '.') }}</p>
-
                 <hr>
-
                 <p class="mb-1 text-muted">Ou 2x de</p>
                 <p class="h5 fw-semibold">
                     R$ {{ number_format(($produto->preco)/2, 2, ',', '.') }}

@@ -29,8 +29,9 @@
                             </div>
                         </div>
                         <div class="card-footer p-0 ">
-                            <form action="">
-                                <button class="btnaddCarrinho btn-sm btn btn-success">Adicionar ao carrinho</button>
+                            <form action="{{route('carrinho.store', $produto->id)}}" method="post">
+                                @csrf
+                                <button type="submit" class="btnaddCarrinho btn-sm btn btn-success">Adicionar ao carrinho</button>
                             </form>
                         </div>
                     </div>

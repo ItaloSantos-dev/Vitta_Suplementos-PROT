@@ -34,7 +34,8 @@
 
             <p class="texto-descricao">{{ $produto->descricao }}</p>
 
-            <form action="">
+            <form action="{{route('carrinho.store', $produto->id)}}" method="post">
+                @csrf
                 <button class="btn btn-success w-100 py-2 mt-2 fw-bold">
                     adicionar ao carrinho 🚀
                 </button>

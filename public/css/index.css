@@ -26,11 +26,12 @@
     color: #418245ff;
 }
 .verMais{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 .btnaddCarrinho{
     font-size: small;
     flex-wrap: nowrap;
     width: 100%;
+    text-decoration: none !important;
     
 }

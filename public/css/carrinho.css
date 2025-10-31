@@ -1,0 +1,29 @@
+.max-img-car{
+    max-height: 50px;
+}
+#carrinho{
+    overflow-y: scroll;
+    max-height: 50vh;
+
+}
+#confirmar{
+    min-height: 30vh;
+    z-index: 1200;
+    left: -50%;
+    transition-duration: .3s ;
+
+}
+.imgcar{
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.imgcar:hover{
+    transform: scale(1.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+.linha{
+    background-color: #c9eecb;
+}
+.carrinho{
+    max-height: 80vh;
+    overflow-y: scroll;
+}

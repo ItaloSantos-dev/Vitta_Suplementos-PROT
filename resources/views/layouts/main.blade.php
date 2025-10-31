@@ -35,7 +35,7 @@
 
         <form action="" class="">
             <button id="login" type="submit" class="bi bi-person btn  animar"></button>
-            <a id="carrinho" class="bi bi-cart btn animar" href=""></a>
+            <a id="carrinho" class="bi bi-cart btn animar" href="{{route('carrinho.index')}}"></a>
         </form>
 
         <nav class="py-2 ">

@@ -1,13 +1,12 @@
 @extends('layouts.main')
-@section('title', 'Vitta-Suplementos')
-
+@section('title', 'hipercaloricos')
 @section('style')
-<link rel="stylesheet" href="{{asset('css/index.css')}}">
+<link rel="stylesheet" href="{{asset('css/produtosstyle.css')}}">
 @endsection
 
 @section('conteudo')
     <main class="container mt-2 mb-2">
-        <h1 class="alert alert-success text-center">Produtos em estoque</h1>
+        <h1 class="alert alert-success text-center">Hipercalóricos</h1>
         <div class="row g-4">
             @foreach($produtos as $produto)
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex gap-2">
@@ -29,9 +28,9 @@
                             </div>
                         </div>
                         <div class="card-footer p-0 ">
-                            <form action="{{route('carrinho.store', $produto->id)}}" method="post">
+                            <form action="{{route('carrinho.store', $produto->id)}}" method="post" class="mb-0">
                                 @csrf
-                                <button type="submit" class="btnaddCarrinho btn-sm btn btn-success">Adicionar ao carrinho</button>
+                                <button type="submit" class="btnaddCarrinho btn-sm btn btn-success ">Adicionar ao carrinho</button>
                             </form>
                         </div>
                     </div>
@@ -40,5 +39,4 @@
             @endforeach
         </div>
     </main>
-
 @endsection

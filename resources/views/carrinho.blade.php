@@ -6,12 +6,18 @@
 @endsection
 
 @section('conteudo')
-    <h1 class="alert alert-success text-center">Carrinho</h1>
     @if (!session()->has('carrinho') or empty(session('carrinho')))
         <h2 class="alert alert-danger text-center">O carrinho está vazio</h2>
     
     @else
-        <div class="container mb-2 carrinho">
+
+        @if (session()->has('msg'))
+            <div id="mensagem" class="alert alert-danger text-center">
+                {{session('msg')}}
+            </div>
+        @endif
+
+        <div class="container mb-2 carrinho mt-2" >
             <div class="row ">
                 <div class="col"><strong>NOME</strong></div>
                 <div class="col"><strong>PREÇO(UN)</strong></div>
@@ -53,7 +59,7 @@
             @endforeach
              <div class="row border mt-3 align-items-center">
                 <div class="col">
-                    Valor Final: {{session('valortotal')??0}}
+                    Valor Final: {{number_format((session('valortotal')??0), 2, ',', '.')}}
                 </div>
 
                 <div class="col-3">
@@ -64,4 +70,5 @@
             </div>
         </div>
     @endif
+
 @endsection

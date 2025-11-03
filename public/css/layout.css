@@ -3,6 +3,7 @@ body{
 }
 header{
     background-color: white;
+    height: auto;
 }
 #infoheader{
     background-color: #A5D6A7;
@@ -17,6 +18,12 @@ header{
     box-shadow: var(--bs-box-shadow) !important;
 
 }
+#carrinhobtn{
+    background-color:#4CAF50 ;
+    position: absolute;
+    left: 90vw;
+
+}
 .animar:hover {
     background-color: #77e37b!important;
 
@@ -27,12 +34,7 @@ header{
     left: 86vw;
 
 }
-#carrinho{
-    background-color:#4CAF50 ;
-    position: absolute;
-    left: 90vw;
 
-}
 footer{
     background-color: #113913;
     color: white;

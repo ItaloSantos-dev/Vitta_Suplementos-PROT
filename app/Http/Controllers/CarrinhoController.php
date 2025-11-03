@@ -40,14 +40,21 @@ class CarrinhoController extends Controller
     {
         $carrinho = session('carrinho', []);
         $valortotal = session('valortotal', 0);
+        $produto = Produto::find($id);
         if(isset($carrinho[$id])){
-            $carrinho[$id]['qtd']++;
+            if($produto->estoque==$carrinho[$id]['qtd']){
+                return redirect()->route('carrinho.index')->with('msg', 'Você atiingiu o limite disponível  deste item');
+            }
+            else{
+                $carrinho[$id]['qtd']++;
+            }
         }
         else{
             //adicionar no carrinho
-            $carrinho[$id]['produto']=Produto::find($id);
+            $carrinho[$id]['produto']=$produto;
             $carrinho[$id]['qtd'] = 1;
         }
+        
         session()->put('carrinho', $carrinho);
         $valortotal = $this->CalcularTotalCarrinho();
         session()->put('valortotal', $valortotal);

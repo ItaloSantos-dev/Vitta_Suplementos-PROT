@@ -43,9 +43,9 @@
             <ul class="d-flex justify-content-center gap-3 list-unstyled mb-0">
                 <li ><a href="/" class="btnMenu text-decoration-none animar">Home</a></li>
                 <li ><a href="/marcas" class="btnMenu text-decoration-none animar">Marcas</a></li>
-                <li ><a href="/wheys" class="btnMenu text-decoration-none animar">Wheys</a></li>
-                <li ><a href="/hipercaloricos" class="btnMenu text-decoration-none animar">Hipercalóricos</a></li>
-                <li ><a href="/creatinas" class="btnMenu text-decoration-none animar">Creatinas</a></li>
+                <li ><a href="{{route('produtos.filtro', 'Wheys')}}" class="btnMenu text-decoration-none animar">Wheys</a></li>
+                <li ><a href="{{route('produtos.filtro', 'Hipercalóricos')}}" class="btnMenu text-decoration-none animar">Hipercalóricos</a></li>
+                <li ><a href="{{route('produtos.filtro', 'Creatinas')}}" class="btnMenu text-decoration-none animar">Creatinas</a></li>
                 <li><i id="btnVerFiltros" onclick="verfiltros()" class="animar btnMenu btnVerFiltros bi bi-arrow-down">Filtrar</i>
                     <div id="filtros" class=" m-2 text-center " >
                         <h6 class="fw-bold">Categorias</h6>

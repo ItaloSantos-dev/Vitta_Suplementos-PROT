@@ -30,6 +30,7 @@ class CategoriaController extends Controller
         return view('viewsNavMenu.creatinas', compact('produtos'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      */

@@ -17,7 +17,7 @@ class MarcaController extends Controller
         foreach($marcas as $marca){
             $produtos[$marca->nome] = $marca->produtos;
         }
-        return view('viewsNavMenu.marcas', compact('produtos'));
+        return view('marcas', compact('produtos'));
     }
 
     /**

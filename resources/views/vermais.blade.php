@@ -19,7 +19,7 @@
             <h2 class="fw-bold mb-2 text-center">{{ $produto->nome }}</h2>
             <div>
                 <a href=""><span class="badge bg-success mb-3 px-3 py-2">{{ $produto->marca->nome }}</span></a>
-                <a href=""><span class="badge bg-success mb-3 px-3 py-2">{{$produto->categoria->nome}}</span></a>
+                <a href="{{route('produtos.filtro', $produto->categoria->nome)}}"><span class="badge bg-success mb-3 px-3 py-2">{{$produto->categoria->nome}}</span></a>
             </div>
 
             <div class="bg-light p-3 rounded mb-3 shadow-sm">

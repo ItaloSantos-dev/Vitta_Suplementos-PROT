@@ -26,8 +26,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-3">
-                    <form action="">
-                        <input class="form-control rounded" placeholder="Busca" type="search" name="" id="">
+                    <form action="{{route('produtos.buscar')}}" method="get">
+                        @csrf
+                        <input class="form-control rounded" placeholder="Busca" type="search" name="busca" id="busca">
                     </form>
                 </div>
             </div>

@@ -16,6 +16,11 @@ class ProdutoController extends Controller
         return view('index', compact('produtos'));
     }
 
+    public function buscar(Request $request){
+        $termo = $request->input('busca');
+        $produtos = Produto::where('nome', 'like', "%{$termo}%")->where('estoque', '>', 0)->get();
+        return view('index', compact('produtos', 'termo'));
+    }
     /**
      * Show the form for creating a new resource.
      */

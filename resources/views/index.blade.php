@@ -7,7 +7,15 @@
 
 @section('conteudo')
     <main class="container mt-2 mb-2">
-        <h1 class="alert alert-success text-center">Produtos em estoque</h1>
+        
+        <h1 class="alert alert-success text-center">
+            @if (isset($termo))
+                Busca: "{{$termo}}"
+            @else
+                Produtos em estoque
+            @endif
+        </h1>   
+        
         <div class="row g-4">
             @foreach($produtos as $produto)
                 <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex gap-2">

@@ -15,10 +15,10 @@ class MarcaSeeder extends Seeder
     public function run(): void
     {
         $marcas=[
-            ['nome'=>'Growth'],
-            ['nome'=>'MaxTitanium'],
-            ['nome'=>'IntegralMedica'],
-            ['nome'=>'Probiótica']
+            ['nome'=>'Growth', 'imagem'=>'https://vectorseek.com/wp-content/uploads/2024/01/Growth-Supplements-Logo-Vector.svg-.png'],
+            ['nome'=>'MaxTitanium', 'imagem'=> 'https://whatthelogo.com/storage/logos/max-titanium-230605.png'],
+            ['nome'=>'IntegralMedica', 'imagem'=>'https://tse4.mm.bing.net/th/id/OIP.TX_n_uqEdDNkLjhcm62Y3wHaHa?rs=1&pid=ImgDetMain&o=7&rm=3'],
+            ['nome'=>'Probiótica', 'imagem'=>'https://tse2.mm.bing.net/th/id/OIP.7eMPf6i4w-VHJmWKEUSc1gAAAA?rs=1&pid=ImgDetMain&o=7&rm=3']
         ];
         foreach($marcas as $m){
             Marca::factory()->create($m);

@@ -19,6 +19,8 @@ Route::get('/marcas', [MarcaController::class, 'index'])->name('marcas.index');
 Route::get('/wheys', [CategoriaController::class, 'wheys'])->name('categorioas.wheys');
 Route::get('/hipercaloricos', [CategoriaController::class,'hipercaloricos'])->name('categorias.hipercaloricos');
 Route::get('/creatinas', [CategoriaController::class, 'creatinas'])->name('categorias.creatinas');
+Route::get('/filtrarpreco', [ProdutoController::class, 'filtroPreco'])->name('produtos.filtropreco');
+Route::get('/{slug}', [ProdutoController::class, 'filtro'])->name('produtos.filtro');
 
 
 

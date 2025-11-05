@@ -11,6 +11,8 @@
         <h1 class="alert alert-success text-center">
             @if (isset($termo))
                 Busca: "{{$termo}}"
+            @elseif(isset($slug))
+                {{ucfirst($slug)}}
             @else
                 Produtos em estoque
             @endif

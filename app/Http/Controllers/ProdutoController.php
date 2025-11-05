@@ -21,6 +21,38 @@ class ProdutoController extends Controller
         $produtos = Produto::where('nome', 'like', "%{$termo}%")->where('estoque', '>', 0)->get();
         return view('index', compact('produtos', 'termo'));
     }
+    public function filtroPreco(Request $request){
+        if($request->precoMin && $request->precoMax){
+            $produtos = Produto::whereBetween('preco',[$request->precoMin, $request->precoMax] )->get();
+            $slug = "Produtos de R$". $request->precoMin . " até R$". $request->precoMax;
+            return view('index', compact('produtos','slug'));
+        }
+        else{
+            if($request->precoMin){
+                $produtos = Produto::where('preco', '>=', $request->precoMin)->get();
+                $slug = "Produtos acima de R$". $request->precoMin ;
+                return view('index', compact('produtos','slug'));
+            }
+            else if($request->precoMax){
+                $produtos = Produto::where('preco', '<=', $request->precoMax)->get();
+                $slug = "Produtos abaixo de R$". $request->precoMax;
+                return view('index', compact('produtos','slug'));
+            }
+            else{
+                $produtos = Produto::all();
+                return view('index', compact('produtos'));
+            }
+        }
+        return view('index', compact('produtos','slug'));
+    }
+    public function filtro( $slug){
+        
+        $produtos = Produto::whereHas('categoria', function($q) use ($slug){
+        $q->where('nome', $slug);
+        })->get();
+        return view('index', compact('produtos','slug'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

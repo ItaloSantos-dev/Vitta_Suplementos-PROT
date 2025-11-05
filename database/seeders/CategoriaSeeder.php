@@ -17,6 +17,10 @@ class CategoriaSeeder extends Seeder
             ['nome'=>'Wheys'],
             ['nome'=>'Hipercalóricos'],
             ['nome'=>'Creatinas'],
+            ['nome'=>'coqueteleiras'],
+            ['nome'=> 'pre-treinos'],
+            ['nome'=> 'emagrecimento'],
+            ['nome'=>'vitaminas']
         ];
         foreach($categorias as $c){
             Categoria::factory()->create($c);

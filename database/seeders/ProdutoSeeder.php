@@ -87,7 +87,49 @@ class ProdutoSeeder extends Seeder
                 'descricao'=>'A creatina auxilia no aumento do desempenho físico durante exercícios repetidos de curta duração e alta intensidade. Formada a partir da associação de três aminoácidos de alto valor biológico (arginina, glicina e metionina), a creatina está presente naturalmente em nosso organismo, sendo que cerca de 95% do seu conteúdo é armazenado no músculo esquelético.',
                 'especificacoes' => '300G',
                 'estoque' => '10'
+            ],
+            [
+                'categoria_id' => 4,
+                'marca_id' => 1,
+                'nome' => 'Coqueteleira Preta 600ml - Growth Supplements',
+                'preco' => 9.90,
+                'imagem' => 'https://www.gsuplementos.com.br/upload/produto/imagem/m_coqueteleira-preta-600ml-growth-supplements.webp',
+                'descricao'=>'Coqueteleira de 600 ML feita com plástico livre de BPA (BPA FREE).',
+                'especificacoes' => '600ML',
+                'estoque' => '1'
+            ],
+            [
+                'categoria_id' => 5,
+                'marca_id' => 2,
+                'nome' => 'Pré treino TDZ Force Gabriel Zancanelli 300g',
+                'preco' => 142.41,
+                'imagem' => 'https://lojamaxtitanium.vtexassets.com/arquivos/ids/158609-600-0/MAX-IMAGENS-LANCAMENTOS-TDZ.jpg.jpg?v=638804071627000000',
+                'descricao'=>'TDZ FORCE Max Titanium – 300g | Sabor Purple Lemonade
+                Potencialize seus treinos com TDZ FORCE, o suplemento pré-treino da Max Titanium, desenvolvido especialmente para atletas e praticantes de atividades físicas que buscam energia explosiva, foco máximo, força, resistência e performance de alto nível. Com uma fórmula avançada e sabor refrescante de Purple Lemonade, este pré-treino é ideal para quem deseja extrair o máximo do corpo e da mente nos treinos mais intensos.',
+                'especificacoes' => '300G',
+                'estoque' => '5'
+            ],
+            [
+                'categoria_id' => 6,
+                'marca_id' => 3,
+                'nome' => 'Oxydrol (120 caps) Integralmedica',
+                'preco' => 64.80,
+                'imagem' => 'https://www.madrugaosuplementos.com.br/wp-content/uploads/2025/07/15314128803-166874-1600-auto.png',
+                'descricao'=>'O termogênico Oxydrol é um suplemento feito para estimular a queima de gordura corporal de forma eficiente e definitiva, além de atuar como um intenso estimulante energético, capaz de favorecer o desempenho durante os treinos mais pesados.',
+                'especificacoes' => '120 cápsulas',
+                'estoque' => '5'
+            ],
+            [
+                'categoria_id' => 7,
+                'marca_id' => 1,
+                'nome' => 'Multivitamínico (120 cáps)',
+                'preco' => 47.90,
+                'imagem' => 'https://www.gsuplementos.com.br/upload/produto/layout/107/produto-principal-v3.webp',
+                'descricao'=>'Fonte de nutrientes indispensáveis para o organismo, o multivitamínico Growth Supplements não pode sair da sua mochila de treino. Com uma cápsula por dia, você garante uma dose de vitaminas e minerais, nutrientes importantes para o bom funcionamento do organismo. São 120 cápsulas para auxiliar na sua ingestão de nutrientes diariamente.',
+                'especificacoes' => '120 cápsulas',
+                'estoque' => '2'
             ]
+
 
 
         ];

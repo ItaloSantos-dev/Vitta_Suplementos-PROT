@@ -49,23 +49,24 @@
                 <li><i id="btnVerFiltros" onclick="verfiltros()" class="animar btnMenu btnVerFiltros bi bi-arrow-down">Filtrar</i>
                     <div id="filtros" class=" m-2 text-center " >
                         <h6 class="fw-bold">Categorias</h6>
-                        <ul class="list-unstyled">
-                            <li>Coqueteleiras</li>
-                            <li>Pre treinos</li>
-                            <li>Emagrecedores</li>
-                            <li>Multivitaminas</li>
+                        <ul class="list-unstyled ">
+                            <li ><a class="linkFiltro" href="{{route('produtos.filtro', 'coqueteleiras')}}">Coqueteleiras</a></li>
+                            <li ><a class="linkFiltro" href="{{route('produtos.filtro', 'pre-treinos')}}">Pre treinos</a></li>
+                            <li ><a class="linkFiltro" href="{{route('produtos.filtro', 'emagrecimento')}}">Emagrecimento</a></li>
+                            <li ><a class="linkFiltro" href="{{route('produtos.filtro', 'vitaminas')}}">Vitaminas</a></li>
                         </ul>
         
-                        <form action="" class="container p-1">
+                        <form action="{{route('produtos.filtropreco')}}" method="get" class="container p-1">
+                            @csrf
                             <h6>Filtrar por preço</h6>
                             <div class="row">
                                 <div class="col">
-                                    <label for="de">DE</label>
-                                    <input class=" form-control" type="number" step="0.01" name="de" id="de">
+                                    <label for="precoMin">DE</label>
+                                    <input class=" form-control" type="number" step="0.01" name="precoMin" id="precoMin">
                                 </div>
                                 <div class="col">
-                                    <label for="ate">ATÉ</label>
-                                    <input class="form-control" type="number" step="0.01" name="ate" id="ate">
+                                    <label for="precoMax">ATÉ</label>
+                                    <input class="form-control" type="number" step="0.01" name="precoMax" id="precoMax">
                                 </div>
                             </div>
                             <div class="row mt-2">
@@ -82,7 +83,6 @@
 
 
 
-    <!-- Filtros laterais -->
     
     @yield('conteudo')
 

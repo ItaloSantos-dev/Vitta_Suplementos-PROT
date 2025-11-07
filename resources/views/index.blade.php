@@ -13,6 +13,8 @@
                 Busca: "{{$termo}}"
             @elseif(isset($slug))
                 {{ucfirst($slug)}}
+            @elseif(isset($marca))
+                {{$marca}}
             @else
                 Produtos em estoque
             @endif

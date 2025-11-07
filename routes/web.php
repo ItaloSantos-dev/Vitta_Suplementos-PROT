@@ -19,6 +19,8 @@ Route::get('/marcas', [MarcaController::class, 'index'])->name('marcas.index');
 Route::get('/filtrarpreco', [ProdutoController::class, 'filtroPreco'])->name('produtos.filtropreco');
 Route::get('/{slug}', [ProdutoController::class, 'filtro'])->name('produtos.filtro');
 
+Route::get('/marcas/{id}/produtos', [ProdutoController::class, 'produtosPorMarca'])->name('produtos.pormarcas');
+
 
 
 

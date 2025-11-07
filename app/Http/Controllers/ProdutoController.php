@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Marca;
 use App\Models\Produto;
 use Illuminate\Http\Request;
 
@@ -14,6 +15,14 @@ class ProdutoController extends Controller
     {
         $produtos=Produto::where('estoque', '>', '0')->get();
         return view('index', compact('produtos'));
+    }
+
+    public function produtosPorMarca($id){
+        $produtos = Produto::where('marca_id', $id)->get();
+        $marcaNome = Marca::find($id);
+        $marca = "Produtos da ". $marcaNome->nome;
+        return view('index', compact('produtos', 'marca'));
+
     }
 
     public function buscar(Request $request){

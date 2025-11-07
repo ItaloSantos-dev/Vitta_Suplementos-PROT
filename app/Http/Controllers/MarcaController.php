@@ -12,12 +12,8 @@ class MarcaController extends Controller
      */
     public function index()
     {
-        $marcas = Marca::with('produtos')->get();
-        $produtos=[];
-        foreach($marcas as $marca){
-            $produtos[$marca->nome] = $marca->produtos;
-        }
-        return view('marcas', compact('produtos'));
+        $marcas = Marca::all();
+        return view('marcas', compact('marcas'));
     }
 
     /**
